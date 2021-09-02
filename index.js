@@ -17,6 +17,7 @@ const displayBooks = books => {
     // Counting Total Found Books Result
     const resultCount = books.length;
 
+    let resultShowing = 0;
     // Looping Through the Books Array
     books?.forEach(book => {
         if(Object.keys(book).indexOf('cover_i') === -1) {
@@ -36,6 +37,7 @@ const displayBooks = books => {
                 </div>
             </div>`;
         booksContainer.appendChild(div);
+        resultShowing ++;
     });
 
     
@@ -46,6 +48,6 @@ const displayBooks = books => {
     const h4 = document.createElement('h4');
     h4.classList.add('text-center');
 
-    if(resultCount === 0 ? h4.innerText = 'No result Found' : h4.innerText = 'Results found: ' + resultCount);
+    if(resultCount === 0 ? h4.innerText = 'No result Found' : h4.innerHTML = `Results Found: ${resultCount}<br>Now Showing: ${resultShowing}`);
     resultCountDiv.appendChild(h4);
 }
