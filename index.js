@@ -48,6 +48,11 @@ const displayBooks = books => {
     const h4 = document.createElement('h4');
     h4.classList.add('text-center');
 
-    if(resultCount === 0 ? h4.innerText = 'No result Found' : h4.innerHTML = `Results Found: ${resultCount}<br>Now Showing: ${resultShowing}`);
+    if(resultCount === 0 ? 
+        h4.innerText = 'No result Found' :  // Error Handling
+        h4.innerHTML = `Results Found: ${resultCount}
+                        <br>
+                        Now Showing: ${resultShowing}`);
+
     resultCountDiv.appendChild(h4);
 }
