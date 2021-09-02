@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Archive</title>
+    <!-- Bootstrap Stylesheet  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body class="bg-success">
     <h1 class="text-center text-warning mt-3 mb-5">FIND YOUR FAVOURITE BOOKS</h1>
+
+    <!-- Search Input Field and Search Button  -->
     <div class="input-group mb-3 w-50 mx-auto">
       <input id="search-field" type="text" class="form-control" placeholder="Search Book">
       <button onclick="loadBooks()" type="button" class="btn btn-light">Search</button>
     </div>
+
+    <!-- Div to Show Result Count  -->
     <div id="result-count"></div>
+
+    <!-- Div to Shows Books as Search Result  -->
     <div id="books-container" class="row row-cols-1 row-cols-md-3 g-4">
         
     </div>
 
+    <!-- Javascript  -->
     <script src="index.js"></script>
 </body>
 </html>
